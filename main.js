@@ -1506,7 +1506,7 @@
       tags: ["Vacapals", "Brand Identity"],
       scope: ["Visual Identity", "Strategic Positioning", "Brand Voice", "Motion Guidelines", "Digital Strategy"],
       vision: "Creating a vibrant and welcoming brand ecosystem for Vacapals, focusing on connection, exploration, and the joy of shared experiences.",
-      images: ["Vacapals/vp logo.png", "placeholder.png", "vacapals/website.gif"],
+      images: ["Vacapals/vp logo.webp", "placeholder.png", "vacapals/website.gif"],
       link: "https://vacapals.com/"
     },
     "1": {
@@ -1528,7 +1528,7 @@
       tags: ["Equip Pro", "Motion Branding"],
       scope: ["Motion Strategy", "UI Animations", "Industrial Motion Systems", "Brand Films", "Technical Visualization"],
       vision: "Defining the rhythmic language of high-performance tools. For Equip Pro, we built a motion system that mirrors the precision and power of their hardware.",
-      images: ["EQUIP PRO/EQUIP PRO.png", "EQUIP PRO/equip pro brand guide.png", "EQUIP PRO/SEAL.png"]
+      images: ["EQUIP PRO/EQUIP PRO.webp", "EQUIP PRO/equip pro brand guide.png", "EQUIP PRO/SEAL.png"]
     }
   };
 
@@ -1696,9 +1696,9 @@
 
   if (infoSection && rotatingPlayerInner && rotatingPlayerBack && rotatingPlayerFrontOverlay) {
     const sectionData = {
-      '01': { bg: '#258fd8', img: 'Vacapals/logo_no_bg.png', sky: 'assets/vacapals-sky-background.png' },
-      '02': { bg: '#fff', img: 'CR8.jpg' },
-      '03': { bg: '#f7f7f7', img: 'EQUIP PRO/logo_no_bg.png' }
+      '01': { bg: '#258fd8', img: 'Vacapals/logo_no_bg.webp', sky: 'assets/vacapals-sky-background.webp' },
+      '02': { bg: '#fff', img: 'CR8.webp' },
+      '03': { bg: '#f7f7f7', img: 'EQUIP PRO/logo_no_bg.webp' }
     };
     const projectPages = {
       '01': { href: 'vacapals.html', label: 'Vacapals', color: '#09005E', textColor: '#ffffff' },
@@ -2007,7 +2007,7 @@
           eyebrow: "System",
           heading: "An identity that travels well",
           copy: "The visual language stretches cleanly across launch assets, trip discovery, and community content without losing the brand's sense of optimism.",
-          image: "Vacapals/vp logo.png"
+          image: "Vacapals/vp logo.webp"
         }
       ]
     },
@@ -2067,7 +2067,7 @@
           eyebrow: "Identity",
           heading: "A mark with more force",
           copy: "The supporting marks and seal elements give the brand authority while keeping the core system clean, direct, and product-led.",
-          image: "EQUIP PRO/EQUIP PRO.png"
+          image: "EQUIP PRO/EQUIP PRO.webp"
         }
       ]
     },

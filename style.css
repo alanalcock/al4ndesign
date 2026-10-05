@@ -9183,7 +9183,7 @@ body.dark-mode.about-page-body .about-bio__lead {
   min-height: 100dvh;
   justify-content: center;
   background-color: var(--accent);
-  background-image: linear-gradient(to top, var(--bg) 0%, color-mix(in srgb, var(--bg) 88%, transparent) 28%, color-mix(in srgb, var(--bg) 45%, transparent) 48%, transparent 68%), url("Vacapals/vacapals-section-bg.png");
+  background-image: linear-gradient(to top, var(--bg) 0%, color-mix(in srgb, var(--bg) 88%, transparent) 28%, color-mix(in srgb, var(--bg) 45%, transparent) 48%, transparent 68%), url("Vacapals/vacapals-section-bg.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9207,7 +9207,7 @@ body.dark-mode.about-page-body .about-bio__lead {
   background-color: #87ceeb;
   background-image:
     linear-gradient(180deg, rgba(15, 15, 15, .12) 24%, rgba(15, 15, 15, .94) 100%),
-    url("Studio CR8/studio-photo-bg.png");
+    url("Studio CR8/studio-photo-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9225,7 +9225,7 @@ body.dark-mode.about-page-body .about-bio__lead {
   background-color: #ffd400;
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0) 42%, rgba(0, 0, 0, .88) 100%),
-    url("EQUIP PRO/EP TRUCK.png");
+    url("EQUIP PRO/EP TRUCK.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10112,7 +10112,7 @@ body.dark-mode.about-page-body .about-bio__lead {
   border-radius: 8px;
   background-image:
     linear-gradient(rgba(7, 30, 65, .2), rgba(7, 30, 65, .2)),
-    url("assets/hero-blueprint.jpg");
+    url("assets/hero-blueprint.webp");
   background-position: center;
   background-size: cover;
 }
