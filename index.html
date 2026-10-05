@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AL4N DESIGN – Creative Studio for Bold Brands</title>
+  <meta name="geo.region" content="JM" />
+  <meta name="geo.placename" content="Jamaica" />
+  <meta name="language" content="English" />
+  <meta property="og:locale" content="en_JM" />
+  <meta name="description" content="AL4N DESIGN is a Jamaica-based creative studio specializing in brand identity, motion design, and digital experiences for Jamaica and Caribbean brands." />
+  <link rel="canonical" href="https://al4ndesign.com/" />
+  <meta property="og:title" content="AL4N DESIGN – Creative Studio for Bold Brands" />
+  <meta property="og:description" content="AL4N DESIGN is a Jamaica-based creative studio specializing in brand identity, motion design, and digital experiences for Jamaica and Caribbean brands." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://al4ndesign.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="al4n design.svg" />
+  <link rel="apple-touch-icon" href="al4n design.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css?v=1.9.3" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AL4N DESIGN",
+    "url": "https://al4ndesign.com/",
+    "email": "mailto:hello@al4ndesign.com",
+    "areaServed": [
+      {"@type": "Country", "name": "Jamaica"},
+      {"@type": "Place", "name": "Caribbean"}
+    ],
+    "sameAs": [
+      "https://instagram.com/al4ndesign",
+      "https://linkedin.com/company/al4ndesign",
+      "https://x.com/al4ndesign",
+      "https://dribbble.com/al4ndesign"
+    ]
+  }
+  </script></head>
+<body class="home-page-body">
+
+  <!-- ─────── NAV OVERLAY ─────── -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <nav class="nav-panel">
+      <div class="nav-top">
+      </div>
+      <div class="nav-links">
+        <a href="#hero"    class="nav-link" data-num="01">Home</a>
+        <a href="#intro"   class="nav-link" data-num="02">About</a>
+        <a href="#info" class="nav-link" data-num="03">Works</a>
+        <a href="#services" class="nav-link" data-num="04">Services</a>
+        <a href="blog.html" class="nav-link" data-num="05">Blog</a>
+      </div>
+      <div class="nav-footer">
+        <button type="button" class="nav-contact-btn" id="nav-bottom-contact">GET IN TOUCH</button>
+        <div class="nav-footer-row">
+          <span class="nav-copyright">© 2026 AL4N DESIGN. All rights reserved.</span>
+
+          <!-- Social Icons / Links -->
+          <div class="nav-socials">
+            <a href="https://instagram.com/al4ndesign" target="_blank" rel="noopener noreferrer" class="nav-social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://linkedin.com/company/al4ndesign" target="_blank" rel="noopener noreferrer" class="nav-social-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://x.com/al4ndesign" target="_blank" rel="noopener noreferrer" class="nav-social-link" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://dribbble.com/al4ndesign" target="_blank" rel="noopener noreferrer" class="nav-social-link" title="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ─────── SITE HEADER ─────── -->
+  <header class="site-header">
+    <!-- ─────── FIXED TOP-LEFT BRANDING ─────── -->
+    <a href="#hero" class="brand-fixed" id="brand-fixed" aria-label="Back to top">
+      <span class="brand-marquee" aria-hidden="true">
+        <svg viewBox="0 0 120 120" role="presentation">
+          <defs>
+            <path id="brand-marquee-path" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0" />
+          </defs>
+          <text><textPath href="#brand-marquee-path" startOffset="0%">AL4N DESIGN •</textPath></text>
+        </svg>
+      </span>
+      <span class="brand-logo-shell"><img src="al4n design.svg" alt="AL4N DESIGN" class="brand-logo" /></span>
+    </a>
+
+    <!-- ─────── FIXED TOP-RIGHT ACTIONS ─────── -->
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun"></i>
+      </button>
+
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+        <span class="menu-btn-label">MENU</span>
+        <span class="menu-btn-icon">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ─────── FIXED CENTERED VIDEO (3D Revolving Card) ─────── -->
+  <div class="player-fixed" id="player-fixed">
+    <div class="player-inner" id="player-inner">
+      <!-- Front Face: Showreel Video & 02 Web Design Video -->
+      <div class="player-face player-front" id="player-front">
+        <video class="player-video" id="player-video" autoplay muted loop playsinline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.4s ease;">
+          <source src="assets/AL4N%20REEL.mov">
+        </video>
+        <video class="player-video" id="player-video-02" autoplay muted loop playsinline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.4s ease; pointer-events: none;">
+          <source src="assets/Recording 2026-08-19 013215.mp4" type="video/mp4">
+        </video>
+        <div class="player-overlay" id="player-overlay-front" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s; background-size: cover; background-position: center; pointer-events: none; display: flex; align-items: center; justify-content: center; z-index: 2;">
+          <span class="player-label" id="player-label-front"></span>
+        </div>
+      </div>
+      <!-- Back Face: Section-Specific Image/Color -->
+    <div class="player-face player-back" id="player-back" style="display: flex; align-items: center; justify-content: center;">
+      <span class="player-label" id="player-label-back"></span>
+    </div>
+    </div>
+    <a class="player-project-link" id="player-project-link" href="vacapals.html" aria-label="View the Vacapals project" hidden>
+      <span>View project</span><span class="player-project-link__arrow" aria-hidden="true">↗</span>
+    </a>
+  </div>
+
+  <!-- ─────── HERO (Full viewport, centered tagline) ─────── -->
+  <section class="section hero" id="hero">
+
+    <!-- Background giant text -->
+    <div class="hero-bg-text" aria-hidden="true">
+      <span class="hero-bg-line">AL4N DESIGN</span>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="hero-headline" id="hero-headline">Don’t just be seen. Stand out where it matters most.</h1>
+    </div>
+
+  </section>
+
+  <!-- ─────── INTRO SECTION ─────── -->
+  <section class="section intro" id="intro">
+    <span class="about-featured">[ About ]</span>
+    <div class="intro-inner">
+
+      <!-- Mobile-only Stats Carousel -->
+      <div class="facts-carousel facts-carousel--mobile" id="facts-carousel-mobile">
+        <div class="facts-inner">
+          <div class="facts-top">
+            <span class="facts-label">Did You Know</span>
+            <div class="facts-counter">
+              <span id="fact-current-mobile">01</span> <span class="counter-sep">/</span> 05
+            </div>
+          </div>
+          <div class="facts-track" id="facts-track-mobile">
+            <div class="fact-slide active">
+              <div class="fact-value"><span class="num-anim" data-target="82" data-suffix="%">0</span></div>
+              <p class="fact-desc">Choose brands they recognize first</p>
+            </div>
+            <div class="fact-slide">
+              <div class="fact-value"><span class="num-anim" data-target="0.05" data-decimals="2" data-suffix="s">0</span></div>
+              <p class="fact-desc">The time it takes to form an impression</p>
+            </div>
+            <div class="fact-slide">
+              <div class="fact-value"><span class="num-anim" data-target="3.5" data-decimals="1" data-suffix="×">0</span></div>
+              <p class="fact-desc">Stronger brands drive higher revenue</p>
+            </div>
+            <div class="fact-slide">
+              <div class="fact-value"><span class="num-anim" data-target="81" data-suffix="%">0</span></div>
+              <p class="fact-desc">Trust drives every purchase decision</p>
+            </div>
+            <div class="fact-slide">
+              <div class="fact-value"><span class="num-anim" data-target="94" data-suffix="%">0</span></div>
+              <p class="fact-desc">Of first impressions are design-based</p>
+            </div>
+          </div>
+          <div class="facts-nav">
+            <button class="fact-nav-btn" id="fact-prev-mobile" aria-label="Previous fact"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="fact-nav-btn" id="fact-next-mobile" aria-label="Next fact"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <p class="intro-body">Hi! My name is Alan, and I'm a freelance web and graphic designer with 10+ years of experience helping SMEs build stronger brands, create impactful digital experiences, and develop results-driven websites that support business growth.</p>
+      <a class="intro-more-link" href="about.html">Learn more <span aria-hidden="true">↗</span></a>
+      
+    </div>
+  </section>
+
+  <!-- ─────── SCIENCE / INFO CARDS ─────── -->
+  <section class="section info-section" id="info" aria-labelledby="projects-section-title">
+    <h2 class="visually-hidden" id="projects-section-title">Projects</h2>
+    <span class="works-featured">[ Selected Works ]</span>
+
+    <div class="info-block">
+      <h3 class="info-header info-header--tumble"><span class="header-num">01</span> / Vacapals</h3>
+      <div class="info-row">
+        <div class="info-col">
+          <p class="info-text">A bright, social-first travel brand built with a playful logo, vibrant visual identity, and an easy-to-use web experience for discovering shared trips.</p>
+          <ul class="service-list">
+            <li>Logo Design</li>
+            <li>Brand Identity</li>
+            <li>UI/UX Design</li>
+            <li>Web Development</li>
+            <li>Style Guide</li>
+          </ul>
+        </div>
+      </div>
+      <div class="info-card-mobile reveal" style="background-color: #09005E;">
+        <img src="Vacapals/logo_no_bg.png" alt="Vacapals brand identity" />
+      </div>
+      <a class="info-card-link info-card-link--vacapals" href="vacapals.html" aria-label="View the Vacapals project">View Vacapals project <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <div class="info-block">
+      <h3 class="info-header info-header--tumble"><span class="header-num">02</span> / Studio CR8</h3>
+      <div class="info-row">
+        <div class="info-col">
+          <p class="info-text">An in-house identity system for Studio CR8, combining a distinctive logo, a flexible visual language, and a style guide for consistent brand expression.</p>
+          <ul class="service-list">
+            <li>Logo Design</li>
+            <li>Brand Identity</li>
+            <li>Style Guide</li>
+          </ul>
+        </div>
+      </div>
+      <div class="info-card-mobile reveal" style="background-color: #262626; padding: 0; overflow: hidden;">
+        <img src="CR8.jpg" alt="Studio CR8 digital experience" />
+      </div>
+      <a class="info-card-link info-card-link--studio-cr8" href="studio-cr8.html" aria-label="View the Studio CR8 project">View Studio CR8 project <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <div class="info-block">
+      <h3 class="info-header info-header--tumble"><span class="header-num">03</span> / Equip Pro</h3>
+      <div class="info-row">
+        <div class="info-col">
+          <p class="info-text">A rugged identity for a trucking and construction services company, with a bold logo and visual system designed for trucks, helmets, and job-site materials.</p>
+          <ul class="service-list">
+            <li>Logo Design</li>
+            <li>Visual Identity</li>
+            <li>Brand Guidelines</li>
+          </ul>
+        </div>
+      </div>
+      <div class="info-card-mobile reveal" style="background-color: #f7f7f7; border: 1px solid var(--border);">
+        <img src="EQUIP PRO/logo_no_bg.png" alt="Equip Pro brand identity" />
+      </div>
+      <a class="info-card-link info-card-link--equip-pro" href="equip-pro.html" aria-label="View the Equip Pro project">View Equip Pro project <span aria-hidden="true">↗</span></a>
+    </div>
+
+  </section>
+
+  <section class="section services-section" id="services" aria-label="Services">
+    <a class="info-view-all" href="works.html">View all projects <span aria-hidden="true">↗</span></a>
+    <div class="services-layout">
+      <header class="services-header">
+        <p class="services-intro">I partner with brands that dare to lead and help them grow their digital presence.</p>
+        <div class="services-header-aside">
+          <span class="services-featured">[ Services ]</span>
+        </div>
+      </header>
+
+      <div class="services-rows">
+        <article class="services-row" data-service-row tabindex="0" aria-expanded="false">
+          <div class="services-row-copy">
+            <h3 class="services-row-title">Brand Identity</h3>
+          </div>
+          <div class="services-row-details">
+            <ul class="services-row-tags">
+              <li>Strategy</li><li>Positioning</li><li>Visual identity</li><li>Guidelines</li>
+            </ul>
+            <p class="services-row-description">Build a distinctive brand foundation, from positioning and identity to guidelines that keep every touchpoint consistent.</p>
+          </div>
+          <button class="services-row-view" type="button" aria-label="View Brand Identity projects" aria-controls="service-previews-brand-identity" aria-expanded="false">[ VIEW ]</button>
+          <div class="services-row-previews services-row-previews--logos" id="service-previews-brand-identity" aria-label="Studio CR8, Vacapals, and Equip Pro project logos">
+            <div class="services-logo-card"><img src="CR8.jpg" alt="Studio CR8 logo" loading="lazy" /></div>
+            <div class="services-logo-card"><img src="Vacapals/logo_no_bg.png" alt="Vacapals logo" loading="lazy" /></div>
+            <div class="services-logo-card"><img src="EQUIP PRO/logo_no_bg.png" alt="Equip Pro logo" loading="lazy" /></div>
+          </div>
+          <button class="services-row-close" type="button" aria-label="Close expanded service previews">×</button>
+        </article>
+
+        <article class="services-row" data-service-row tabindex="0" aria-expanded="false">
+          <div class="services-row-copy">
+            <h3 class="services-row-title">Website Design / Development</h3>
+          </div>
+          <div class="services-row-details">
+            <ul class="services-row-tags">
+              <li>UI/UX</li><li>Website design</li><li>Development</li><li>Responsive design</li>
+            </ul>
+            <p class="services-row-description">Plan, design, and build responsive websites that make your brand stand out and turn visitors into customers.</p>
+          </div>
+          <button class="services-row-view" type="button" aria-label="View Website Design and Development projects" aria-controls="service-previews-websites" aria-expanded="false">[ VIEW ]</button>
+          <div class="services-row-previews" id="service-previews-websites" aria-label="Gemcore, Vacapals, and Studio CR8 web design previews">
+            <img src="assets/gemcore.gif" alt="Gemcore animated website preview" loading="lazy" />
+            <img src="assets/vacapals.gif" alt="Vacapals animated website preview" loading="lazy" />
+            <img src="assets/web.gif" alt="Studio CR8 website preview" loading="lazy" />
+          </div>
+          <button class="services-row-close" type="button" aria-label="Close expanded service previews">×</button>
+        </article>
+
+        <article class="services-row" data-service-row tabindex="0" aria-expanded="false">
+          <div class="services-row-copy">
+            <h3 class="services-row-title">Web and Mobile App Development</h3>
+          </div>
+          <div class="services-row-details">
+            <ul class="services-row-tags">
+              <li>Web applications</li><li>iOS apps</li><li>Android apps</li><li>UI/UX</li>
+            </ul>
+            <p class="services-row-description">Design and build web and mobile apps that help customers connect with your brand and get things done.</p>
+          </div>
+          <button class="services-row-view" type="button" aria-label="View Web and Mobile App Development projects" aria-controls="service-previews-apps" aria-expanded="false">[ VIEW ]</button>
+          <div class="services-row-previews" id="service-previews-apps" aria-label="Web and mobile app development project previews">
+            <img src="assets/ORBIT-5-01-LITE.gif" alt="Orbit mobile app screen preview" loading="lazy" />
+            <img src="assets/app-wellness-preview.png" alt="Daily wellness and habit-tracking mobile app screen" loading="lazy" />
+            <img src="assets/web-retail-dashboard-preview.png" alt="Online retail web dashboard with sales and order analytics" loading="lazy" />
+          </div>
+          <button class="services-row-close" type="button" aria-label="Close expanded service previews">×</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────── SITE FOOTER ─────── -->
+  <footer class="site-footer" id="site-footer">
+    <!-- ─────── READY CTA (wave heading) ─────── -->
+    <section class="cta-wave" id="cta-wave" aria-label="Start your project">
+      <h2 class="cta-wave__title" id="cta-wave-title">Ready to start your project?</h2>
+      <button class="cta-wave__btn" id="collab-dialog-trigger" type="button">Let’s collaborate <span class="cta-wave__arrow" aria-hidden="true">↗</span></button>
+    </section>
+
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <span class="footer-label">Directory</span>
+          <nav class="footer-nav">
+            <a href="#hero"  class="footer-link">Home</a>
+            <a href="#intro" class="footer-link">About</a>
+            <a href="#info" class="footer-link">Works</a>
+            <a href="#services" class="footer-link">Services</a>
+            <a href="blog.html"  class="footer-link">Blog</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <span class="footer-label">Social</span>
+          <nav class="footer-nav">
+            <a href="https://instagram.com/al4ndesign" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a>
+            <a href="https://x.com/al4ndesign" target="_blank" rel="noopener noreferrer" class="footer-link">Twitter / X</a>
+            <a href="https://dribbble.com/al4ndesign" target="_blank" rel="noopener noreferrer" class="footer-link">Dribbble</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <span class="footer-label">Start a Project</span>
+          <div class="footer-contact-stack">
+            <div class="footer-email-row">
+              <a href="mailto:hello@al4ndesign.com" target="_self" class="footer-email">hello@al4ndesign.com</a>
+              <button id="copy-email-footer" class="copy-btn" title="Copy to clipboard">
+                <i class="fa-regular fa-copy"></i>
+                <span class="copy-tooltip">Copied!</span>
+              </button>
+            </div>
+            <p class="footer-email-copyright">© 2026 AL4N DESIGN. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-newsletter">
+        <span class="footer-label">Stay Connected</span>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Your email address" required aria-label="Email address for newsletter" />
+          <button type="submit">Join</button>
+        </form>
+        <p class="newsletter-status" id="newsletter-form-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+    <p class="footer-giant-text">AL4N DESIGN</p>
+  </footer>
+
+  <!-- ─────── COLLAB MODAL ─────── -->
+  <div class="collab-dialog" id="collab-dialog" aria-hidden="true">
+    <div class="collab-dialog__backdrop" data-collab-close></div>
+    <section class="collab-dialog__panel" role="dialog" aria-modal="true" aria-labelledby="collab-dialog-title">
+      <div class="collab-dialog__header">
+        <span class="collab-dialog__eyebrow">Let’s collaborate</span>
+        <button class="collab-dialog__close" type="button" data-collab-close aria-label="Close collaboration form">Close</button>
+      </div>
+      <h2 id="collab-dialog-title">Tell us what you’re building.</h2>
+      <p class="collab-dialog__intro">Share a few details about your project and we’ll get back to you in less than 24 hours.</p>
+      <form class="collab-form" id="collab-form">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <label>
+          <span>Company <em>Optional</em></span>
+          <input type="text" name="company" autocomplete="organization" />
+        </label>
+        <label>
+          <span>What do you need?</span>
+          <select name="service" required>
+            <option value="" selected disabled>Select a service</option>
+            <option value="brand-strategy">Brand strategy</option>
+            <option value="identity">Visual identity</option>
+            <option value="website">Website design &amp; development</option>
+            <option value="web-app">Web application</option>
+            <option value="mobile-app">Mobile application (iOS / Android)</option>
+            <option value="campaign">Creative campaign</option>
+            <option value="other">Something else</option>
+          </select>
+        </label>
+        <label>
+          <span>Project details</span>
+          <textarea name="details" rows="5" required></textarea>
+        </label>
+        <button class="collab-form__submit" type="submit">Submit inquiry <span aria-hidden="true">↗</span></button>
+        <p class="collab-form__status" id="collab-form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </div>
+
+  <div class="project-modal" id="project-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-window modal-window--side" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header-actions">
+        <a href="#" class="modal-live-link" id="modal-live-link" target="_blank" rel="noopener noreferrer">Visit live site</a>
+        <button class="modal-close" id="modal-close">Close</button>
+      </div>
+      <div class="modal-side-head">
+        <span class="modal-label" id="modal-label">Project</span>
+        <h2 class="modal-title" id="modal-title">Project title</h2>
+        <p class="modal-description" id="modal-description">Project summary</p>
+      </div>
+      <div class="modal-side-scroll" id="modal-side-scroll"></div>
+    </div>
+  </div>
+
+  <!-- Fixed Bottom Bar for the rest of the site -->
+  <div class="bottom-bar" id="bottom-bar">
+    <div class="bottom-bar-left">
+      <span class="bottom-copy">© 2026 made by <a href="#" class="bottom-studio-link">AL4N DESIGN</a></span>
+    </div>
+    <div class="bottom-bar-center"></div>
+    <div class="bottom-bar-right">
+      <button type="button" class="join-btn">START YOUR PROJECT</button>
+    </div>
+  </div>
+
+  <div class="cookie-banner is-pending" id="cookie-banner" role="dialog" aria-label="Cookie notice">
+    <div class="cookie-banner__copy">
+      <span class="cookie-banner__label">Cookies</span>
+      <p>This site uses cookies to keep AL4N DESIGN running smoothly.</p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="cookie-banner__decline" id="cookie-decline" type="button">Decline</button>
+      <button class="cookie-banner__accept" id="cookie-accept" type="button">Accept</button>
+    </div>
+  </div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <script src="shared-components.js?v=1.4.10"></script>
+  <script src="main.js?v=1.5.28"></script>
+</body>
+</html>
