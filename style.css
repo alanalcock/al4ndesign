@@ -10243,7 +10243,23 @@ body.dark-mode.about-page-body .about-bio__lead {
   cursor: pointer;
 }
 .preview-device-controls svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.project-page-body--vacapals .project-page__gallery-card--website figcaption { padding-right: 16px; }
+.project-page-body--vacapals .project-page__gallery-card--website {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+}
+.project-page-body--vacapals .project-page__gallery-card--website .project-page__gallery-embed { grid-column: 1 / -1; min-width: 0; }
+.project-page-body--vacapals .project-page__gallery-card--website .preview-device-controls { grid-column: 1; grid-row: 2; border-bottom: 0; }
+.project-page-body--vacapals .project-page__gallery-card--website figcaption {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  padding: 12px 16px;
+  text-align: right;
+}
+@media (max-width: 600px) {
+  .project-page-body--vacapals .project-page__gallery-card--website { grid-template-columns: minmax(0, 1fr); }
+  .project-page-body--vacapals .project-page__gallery-card--website figcaption { grid-column: 1; grid-row: 3; text-align: left; }
+}
 .preview-device-controls button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
 .preview-device-controls button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
