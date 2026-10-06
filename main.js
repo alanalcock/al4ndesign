@@ -2193,6 +2193,7 @@
     const deviceButtons = Array.from(embed.closest('figure').querySelectorAll('[data-preview-device]'));
     const deviceSizes = { web: [1440, 980], mobile: [390, 844], tablet: [768, 1024] };
     let selectedDevice = 'web';
+    const previewTitle = embed.querySelector('iframe')?.title || 'Website preview';
 
     const fitDesktopPreview = () => {
       const isMobile = window.matchMedia('(max-width: 760px)').matches;
@@ -2214,7 +2215,7 @@
     deviceButtons.forEach((button) => button.addEventListener('click', () => {
       selectedDevice = button.dataset.previewDevice;
       deviceButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
-      embed.querySelector('iframe').title = `Vacapals ${selectedDevice} website preview`;
+      embed.querySelector('iframe').title = `${previewTitle} — ${selectedDevice}`;
       fitDesktopPreview();
     }));
 

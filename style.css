@@ -10243,13 +10243,13 @@ body.dark-mode.about-page-body .about-bio__lead {
   cursor: pointer;
 }
 .preview-device-controls svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.project-page-body--vacapals .project-page__gallery-card--website {
+.project-page-body .project-page__gallery-card--website:has(.preview-device-controls) {
   display: grid;
   grid-template-columns: minmax(0, 1fr) max-content;
 }
-.project-page-body--vacapals .project-page__gallery-card--website .project-page__gallery-embed { grid-column: 1 / -1; min-width: 0; }
-.project-page-body--vacapals .project-page__gallery-card--website .preview-device-controls { grid-column: 2; grid-row: 2; border-bottom: 0; justify-content: flex-end; }
-.project-page-body--vacapals .project-page__gallery-card--website figcaption {
+.project-page-body .project-page__gallery-card--website:has(.preview-device-controls) .project-page__gallery-embed { grid-column: 1 / -1; min-width: 0; }
+.project-page-body .project-page__gallery-card--website:has(.preview-device-controls) .preview-device-controls { grid-column: 2; grid-row: 2; border-bottom: 0; justify-content: flex-end; }
+.project-page-body .project-page__gallery-card--website:has(.preview-device-controls) figcaption {
   grid-column: 1;
   grid-row: 2;
   align-self: center;
@@ -10257,9 +10257,9 @@ body.dark-mode.about-page-body .about-bio__lead {
   text-align: left;
 }
 @media (max-width: 600px) {
-  .project-page-body--vacapals .project-page__gallery-card--website { grid-template-columns: minmax(0, 1fr); }
-  .project-page-body--vacapals .project-page__gallery-card--website .preview-device-controls { grid-column: 1; justify-self: end; }
-  .project-page-body--vacapals .project-page__gallery-card--website figcaption { grid-column: 1; grid-row: 3; text-align: left; }
+  .project-page-body .project-page__gallery-card--website:has(.preview-device-controls) { grid-template-columns: minmax(0, 1fr); }
+  .project-page-body .project-page__gallery-card--website:has(.preview-device-controls) .preview-device-controls { grid-column: 1; justify-self: end; }
+  .project-page-body .project-page__gallery-card--website:has(.preview-device-controls) figcaption { grid-column: 1; grid-row: 3; text-align: left; }
 }
 .preview-device-controls button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
 .preview-device-controls button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
