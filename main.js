@@ -2190,19 +2190,33 @@
   document.querySelectorAll('.project-page__gallery-card--website .project-page__gallery-embed').forEach((embed) => {
     const scaler = embed.querySelector('.iframe-scaler');
     if (!scaler) return;
+    const deviceButtons = Array.from(embed.closest('figure').querySelectorAll('[data-preview-device]'));
+    const deviceSizes = { web: [1440, 980], mobile: [390, 844], tablet: [768, 1024] };
+    let selectedDevice = 'web';
 
     const fitDesktopPreview = () => {
       const isMobile = window.matchMedia('(max-width: 760px)').matches;
-      const previewWidth = isMobile ? 1600 : 1440;
-      const previewHeight = isMobile ? 900 : 980;
+      const [previewWidth, previewHeight] = deviceButtons.length
+        ? deviceSizes[selectedDevice]
+        : (isMobile ? [1600, 900] : [1440, 980]);
       const currentWidth = embed.getBoundingClientRect().width || embed.clientWidth || previewWidth;
-      const scale = currentWidth / previewWidth;
-      scaler.style.width = `${previewWidth}px`;
-      scaler.style.height = `${previewHeight}px`;
-      scaler.style.transform = `scale(${scale})`;
+      const scale = deviceButtons.length ? Math.min(1, currentWidth / previewWidth) : currentWidth / previewWidth;
+      scaler.style.setProperty('width', `${previewWidth}px`, deviceButtons.length ? 'important' : '');
+      scaler.style.setProperty('height', `${previewHeight}px`, deviceButtons.length ? 'important' : '');
+      scaler.style.setProperty('transform', `scale(${scale})`, deviceButtons.length ? 'important' : '');
+      if (deviceButtons.length) {
+        scaler.style.position = 'relative';
+        scaler.style.left = `${Math.max(0, (currentWidth - previewWidth * scale) / 2)}px`;
+      }
       scaler.style.transformOrigin = 'top left';
-      embed.style.height = `${previewHeight * scale}px`;
+      embed.style.setProperty('height', `${previewHeight * scale}px`, deviceButtons.length ? 'important' : '');
     };
+    deviceButtons.forEach((button) => button.addEventListener('click', () => {
+      selectedDevice = button.dataset.previewDevice;
+      deviceButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+      embed.querySelector('iframe').title = `Vacapals ${selectedDevice} website preview`;
+      fitDesktopPreview();
+    }));
 
     window.addEventListener('resize', fitDesktopPreview);
     if (typeof ResizeObserver !== 'undefined') {
