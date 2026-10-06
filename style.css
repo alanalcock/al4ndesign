@@ -10220,6 +10220,20 @@ body.dark-mode.about-page-body .about-bio__lead {
   }
 }
 
+.project-page__gallery-embed.preview-transition-ready {
+  transition: height 420ms cubic-bezier(.22, 1, .36, 1);
+}
+.preview-transition-ready .iframe-scaler {
+  transition: width 420ms cubic-bezier(.22, 1, .36, 1),
+              height 420ms cubic-bezier(.22, 1, .36, 1),
+              transform 420ms cubic-bezier(.22, 1, .36, 1),
+              left 420ms cubic-bezier(.22, 1, .36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-page__gallery-embed.preview-transition-ready,
+  .preview-transition-ready .iframe-scaler { transition: none; }
+}
+
 .preview-device-controls {
   display: flex;
   flex-wrap: wrap;

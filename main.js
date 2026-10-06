@@ -2224,6 +2224,9 @@
       new ResizeObserver(fitDesktopPreview).observe(embed);
     }
     fitDesktopPreview();
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      embed.classList.add('preview-transition-ready');
+    }));
     window.addEventListener('load', fitDesktopPreview);
   });
 
