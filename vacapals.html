@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="al4n design.svg" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="style.css?v=1.9.5" />
+  <link rel="stylesheet" href="style.css?v=1.9.6" />
   <meta property="og:image" content="https://al4ndesign.com/assets/AL4NDESIGN.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="766" />
@@ -64,11 +64,6 @@
 
     <h2 class="equip-section-heading">1. Web Development</h2>    <section class="project-page__gallery project-page__gallery--editorial">
       <figure class="project-page__gallery-card project-page__gallery-card--website" style="position: relative; overflow: visible;">
-        <div class="preview-device-controls" role="group" aria-label="Website preview device">
-          <button type="button" data-preview-device="web" aria-pressed="true">Web</button>
-          <button type="button" data-preview-device="mobile" aria-pressed="false">Mobile</button>
-          <button type="button" data-preview-device="tablet" aria-pressed="false">Tablet</button>
-        </div>
         <div class="project-page__gallery-embed" aria-label="Vacapals website preview">
           <div class="iframe-scaler">
             <iframe
@@ -79,7 +74,12 @@
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-        <a class="project-page__embed-btn project-page__embed-btn--tag" href="https://transfers.vacapals.com/" target="_blank" rel="noopener noreferrer">Visit live site ↗</a>
+        <div class="preview-device-controls" role="group" aria-label="Website preview controls">
+          <button type="button" data-preview-device="web" aria-pressed="true" aria-label="Web preview" title="Web preview"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M12 16v5m-5 0h10"/></svg></button>
+          <button type="button" data-preview-device="mobile" aria-pressed="false" aria-label="Mobile preview" title="Mobile preview"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg></button>
+          <button type="button" data-preview-device="tablet" aria-pressed="false" aria-label="Tablet preview" title="Tablet preview"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="2" width="18" height="20" rx="2"/><path d="M10 18h4"/></svg></button>
+          <a class="preview-live-link" href="https://transfers.vacapals.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit live site" title="Visit live site"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a>
+        </div>
         <figcaption>Web direction that keeps the brand bright while making trip discovery feel easy.</figcaption>
       </figure>
     </section>
@@ -87,7 +87,7 @@
     <h2 class="equip-section-heading">2. Logo Design</h2>
     <section class="project-page__gallery project-page__gallery--editorial project-page__gallery--logos">
       <figure class="project-page__gallery-card project-page__gallery-card--logo">
-        <img src="vacapals/vp logo.png" alt="Vacapals logo composition" loading="lazy" />
+        <img src="Vacapals/vp logo.webp" alt="Vacapals logo composition" loading="lazy" />
       </figure>
       <figure class="project-page__gallery-card project-page__gallery-card--logo">
         <img src="Vacapals/VP LINE 2.webp" alt="Vacapals VP line logo composition" loading="lazy" />

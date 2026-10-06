@@ -10228,15 +10228,22 @@ body.dark-mode.about-page-body .about-bio__lead {
   background: var(--bg);
   border-bottom: 1px solid var(--border);
 }
-.preview-device-controls button {
+.preview-device-controls button,
+.preview-device-controls .preview-live-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
   min-height: 44px;
-  padding: 10px 18px;
+  padding: 10px;
   border: 1px solid var(--border);
   border-radius: 4px;
   background: var(--card-bg);
   color: var(--text);
   cursor: pointer;
 }
+.preview-device-controls svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.project-page-body--vacapals .project-page__gallery-card--website figcaption { padding-right: 16px; }
 .preview-device-controls button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
 .preview-device-controls button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
