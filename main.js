@@ -1460,23 +1460,11 @@
     next.addEventListener('click', () => showImage(activeIndex + 1));
   });
 
-  const cookieBanner = document.getElementById('cookie-banner');
-  const cookieAccept = document.getElementById('cookie-accept');
-  const cookieDecline = document.getElementById('cookie-decline');
-  if (cookieBanner && cookieAccept && cookieDecline) {
-    if (localStorage.getItem('studio-cr8-cookies-choice')) {
-      cookieBanner.classList.add('is-dismissed');
-    } else {
-      window.setTimeout(() => cookieBanner.classList.remove('is-pending'), 1200);
-    }
-    const dismissCookies = (choice) => {
-      localStorage.setItem('studio-cr8-cookies-choice', choice);
-      cookieBanner.classList.add('is-dismissed');
-    };
-    cookieAccept.addEventListener('click', () => {
-      dismissCookies('accepted');
-    });
-    cookieDecline.addEventListener('click', () => dismissCookies('declined'));
+  // Use the site's default cookie preference without displaying a banner.
+  try {
+    localStorage.setItem('studio-cr8-cookies-choice', 'accepted');
+  } catch {
+    // Storage may be unavailable in private or restricted browser sessions.
   }
 
   if (bottomBar && siteFooter) {
