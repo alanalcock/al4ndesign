@@ -10279,12 +10279,14 @@ body.dark-mode.about-page-body .about-bio__lead {
 .preview-device-controls button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* Homepage mobile layout: use flow instead of desktop viewport positioning. */
+.home-page-body .site-header { padding-left: 16px; }
 @media (max-width: 768px) {
   .home-page-body { padding-bottom: 0; }
   .home-page-body .section { scroll-margin-top: 88px; }
   .home-page-body .site-header {
     height: 80px;
     padding: 12px 20px;
+    padding-left: 12px;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
   }
