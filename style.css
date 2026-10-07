@@ -10286,7 +10286,7 @@ body.dark-mode.about-page-body .about-bio__lead {
   .home-page-body .site-header {
     height: 80px;
     padding: 12px 20px;
-    padding-left: 12px;
+    padding-left: 4px;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
   }
