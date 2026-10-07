@@ -10355,8 +10355,8 @@ body.dark-mode.about-page-body .about-bio__lead {
     background: var(--bg);
   }
   .home-page-body #info.info-section > .info-block {
-    position: relative;
-    top: auto;
+    position: sticky;
+    top: var(--mobile-work-top, 80px);
     width: 100%;
     min-height: 0;
     height: auto;

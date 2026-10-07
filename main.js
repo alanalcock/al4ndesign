@@ -479,6 +479,22 @@
 
   revealEls.forEach((el) => revealObserver.observe(el));
 
+  // Let tall mobile work cards scroll fully into view before they pin.
+  const mobileWorkCards = [...document.querySelectorAll('.home-page-body #info > .info-block')];
+  const fitMobileWorkCards = () => {
+    if (window.innerWidth > 768) return;
+    const barHeight = document.querySelector('.bottom-bar')?.offsetHeight || 64;
+    mobileWorkCards.forEach((card) => {
+      card.style.setProperty('--mobile-work-top', `${Math.min(80, window.innerHeight - barHeight - card.offsetHeight)}px`);
+    });
+  };
+  window.addEventListener('resize', fitMobileWorkCards);
+  if (mobileWorkCards.length && typeof ResizeObserver !== 'undefined') {
+    const workCardObserver = new ResizeObserver(fitMobileWorkCards);
+    mobileWorkCards.forEach((card) => workCardObserver.observe(card));
+  }
+  fitMobileWorkCards();
+
   // Stagger project and Services badges when their list enters view.
   (function () {
     const lists = document.querySelectorAll('#info > .info-block .service-list, #services .services-row-tags');
