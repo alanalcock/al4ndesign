@@ -10290,7 +10290,7 @@ body.dark-mode.about-page-body .about-bio__lead {
     background: var(--bg);
     border-bottom: 1px solid var(--border);
   }
-  .home-page-body .brand-logo { width: 36px; height: 36px; }
+  .home-page-body .brand-logo { width: 54px; height: 36px; }
   .home-page-body .brand-marquee { width: 66px; height: 66px; }
   .home-page-body .brand-logo.is-footer-mark { filter: none; }
   .home-page-body.dark-mode .brand-logo.is-footer-mark { filter: invert(1); }
