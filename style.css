@@ -10378,7 +10378,16 @@ body.dark-mode.about-page-body .about-bio__lead {
     height: 100%;
     object-fit: contain;
   }
-  .home-page-body #info .info-card-link { position: relative; inset: auto; min-height: 44px; margin-top: 0; }
+  .home-page-body #info .info-card-link {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    min-height: 44px;
+    margin-top: 0;
+  }
+  .home-page-body .player-project-link { width: 100%; box-sizing: border-box; }
   .home-page-body .services-section { padding: 40px 20px; }
   .home-page-body .services-header { display: flex; flex-direction: column; gap: 20px; }
   .home-page-body .services-intro { font-size: clamp(28px, 6vw, 40px); line-height: 1.2; }
