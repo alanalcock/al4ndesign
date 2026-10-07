@@ -10374,6 +10374,7 @@ body.dark-mode.about-page-body .about-bio__lead {
   .home-page-body #info .info-text { font-size: 16px; line-height: 1.6; }
   .home-page-body #info .info-card-mobile {
     position: relative;
+    border-radius: 4px;
     margin-top: 0;
     height: auto;
     min-height: 0;
