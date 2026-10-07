@@ -10401,6 +10401,7 @@ body.dark-mode.about-page-body .about-bio__lead {
   }
   .home-page-body .player-project-link { width: 100%; box-sizing: border-box; }
   .home-page-body .services-section { padding: 40px 20px; }
+  .home-page-body .services-section > .info-view-all { margin-top: -24px; }
   .home-page-body .services-header { display: flex; flex-direction: column; gap: 20px; }
   .home-page-body .services-intro { font-size: clamp(28px, 6vw, 40px); line-height: 1.2; }
   .home-page-body .services-header-aside { align-self: flex-start; }
