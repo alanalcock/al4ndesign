@@ -10338,6 +10338,13 @@ body.dark-mode.about-page-body .about-bio__lead {
   .home-page-body .intro { padding: 56px 20px; min-height: 0; }
   .home-page-body .intro-inner { width: 100%; max-width: 620px; margin: 0 auto; }
   .home-page-body .intro-body { font-size: 17px; line-height: 1.65; }
+  .home-page-body #intro .intro-more-link {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    min-height: 44px;
+  }
   .home-page-body #info.info-section { padding: 0; }
   .home-page-body #info .works-featured {
     position: relative;
