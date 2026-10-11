@@ -82,6 +82,7 @@
           <h2 class="cta-wave__title" id="cta-wave-title">Ready to start your project?</h2>
           <button class="cta-wave__btn" id="collab-dialog-trigger" type="button">Let’s collaborate <span class="cta-wave__arrow" aria-hidden="true">↗</span></button>
         </section>
+        <div class="footer-logo-flashlight" aria-hidden="true"></div>
 
         <div class="footer-content">
           <div class="footer-grid">

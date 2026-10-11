@@ -2253,6 +2253,69 @@
   });
 
 })();
+
+// Reveal a soft pool of brighter logo tiles under the pointer in the footer.
+(() => {
+  const footer = document.querySelector('#site-footer');
+  if (!footer || !footer.querySelector('.footer-logo-flashlight')) return;
+  const lens = footer.querySelector('.footer-logo-flashlight');
+  const canvas = document.createElement('canvas');
+  lens.appendChild(canvas);
+  const context = canvas.getContext('2d');
+  if (!context) return;
+  const logo = new Image();
+  logo.src = 'al4n%20design.svg';
+  let lastPoint = null;
+
+  const drawLens = (x, y, bounds) => {
+    if (!logo.complete || !logo.naturalWidth) return;
+    const density = Math.min(window.devicePixelRatio || 1, 2);
+    const width = Math.ceil(bounds.width * density);
+    const height = Math.ceil(bounds.height * density);
+    if (canvas.width !== width || canvas.height !== height) {
+      canvas.width = width;
+      canvas.height = height;
+    }
+    context.setTransform(density, 0, 0, density, 0, 0);
+    context.clearRect(0, 0, bounds.width, bounds.height);
+    context.globalCompositeOperation = 'source-over';
+    const radius = 150;
+    for (let row = Math.floor((y - radius - 22) / 22); row <= Math.ceil((y + radius) / 22); row++) {
+      const offset = ((row % 2) + 2) % 2 * 22;
+      for (let column = Math.floor((x - radius - offset - 22) / 44); column <= Math.ceil((x + radius - offset) / 44); column++) {
+        const centerX = column * 44 + offset + 11;
+        const centerY = row * 22 + 11;
+        const dx = centerX - x;
+        const dy = centerY - y;
+        const distance = Math.hypot(dx, dy);
+        if (distance > radius + 22) continue;
+        const strength = Math.pow(Math.max(0, 1 - distance / radius), 2);
+        const size = 22 * (1 + .65 * strength);
+        const displacement = 1 + .18 * strength;
+        context.drawImage(logo, x + dx * displacement - size / 2, y + dy * displacement - size / 2, size, size);
+      }
+    }
+    context.globalCompositeOperation = 'source-in';
+    context.fillStyle = '#fff';
+    context.fillRect(0, 0, bounds.width, bounds.height);
+    context.globalCompositeOperation = 'source-over';
+  };
+  logo.onload = () => { if (lastPoint) drawLens(...lastPoint); };
+
+  const updateFlashlight = (event) => {
+    if (event.pointerType === 'touch') return;
+    const bounds = footer.getBoundingClientRect();
+    footer.style.setProperty('--footer-flashlight-x', `${event.clientX - bounds.left}px`);
+    footer.style.setProperty('--footer-flashlight-y', `${event.clientY - bounds.top}px`);
+    lastPoint = [event.clientX - bounds.left, event.clientY - bounds.top, bounds];
+    drawLens(...lastPoint);
+    footer.classList.add('is-flashlight-active');
+  };
+
+  footer.addEventListener('pointerenter', updateFlashlight);
+  footer.addEventListener('pointermove', updateFlashlight);
+  footer.addEventListener('pointerleave', () => footer.classList.remove('is-flashlight-active'));
+})();
 /* Equip Pro reversible scroll reveals */
 (() => {
   const initProjectScrollReveals = () => {
@@ -2300,4 +2363,33 @@
   } else {
     initProjectScrollReveals();
   }
+})();
+
+// A dot that expands over clickable objects and preserves native editing cursors.
+(() => {
+  const mouseInput = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const root = document.documentElement;
+  const dot = document.createElement('div');
+  dot.className = 'site-dot-cursor';
+  dot.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(dot);
+  const hide = () => {
+    dot.classList.remove('is-visible');
+    root.classList.remove('has-dot-cursor', 'is-dot-editing');
+  };
+  document.addEventListener('pointermove', (event) => {
+    if (!mouseInput.matches || event.pointerType === 'touch') { hide(); return; }
+    const target = event.target instanceof Element ? event.target : null;
+    const editing = Boolean(target?.closest('input, textarea, [contenteditable="true"]'));
+    root.classList.add('has-dot-cursor');
+    root.classList.toggle('is-dot-editing', editing);
+    dot.style.left = event.clientX + 'px';
+    dot.style.top = event.clientY + 'px';
+    dot.classList.toggle('is-visible', !editing);
+    const clickable = target?.closest('a[href], button:not(:disabled), [role="button"], summary, label, [tabindex="0"], [data-service-row], [onclick]');
+    dot.classList.toggle('is-clickable', Boolean(clickable));
+  }, { passive: true });
+  document.addEventListener('pointerout', (event) => { if (!event.relatedTarget) hide(); });
+  window.addEventListener('blur', hide);
+  mouseInput.addEventListener('change', hide);
 })();
